@@ -1,0 +1,167 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+\input{preamble.tex}
+
+\begin{document}
+
+\title{Problems for the category theory reading course, 2018}
+\author{Scott Morrison}
+  \address[Scott Morrison]{
+  	Mathematical Sciences Institute,
+  	Australian National University
+  }
+  \email{\href{mailto:scott.morrison@anu.edu.au}{scott.morrison@anu.edu.au}}
+\date{Version of \today}
+
+\maketitle
+
+\section{Assignment 1, due end of Week 3}
+
+\subsection{Functors}
+\begin{enumerate}
+\item Leinster 1.2.21 (functors preserve isomorphisms)
+\item Leinster 1.2.27, 1.2.28b (full, faithful)
+\end{enumerate}
+
+\subsection{Natural transformations}
+\begin{enumerate}
+\item In $\sf{fdVec}$, show that the functors $\operatorname{id}$ and $**$ are naturally isomorphic. 
+\item Show the the vertical composition of two natural transformations is in fact a natural transformation. 
+\item Prove \emph{carefully} that the horizontal composition of two natural transformations is again a natural transformation.
+\item Show that a functor $F : \cC \to \cD$ is part of an equivalence of categories if and only if it is \emph{fully faithful} and \emph{essentially surjective}. (Hint: faithul is easier than full; then use that the inverse of an equivalence is an equivalence.) \footnote{Hint: there's a nice proof in Maclane, or you can try reading \url{https://raw.githubusercontent.com/semorrison/lean-category-theory/master/src/categories/equivalence/characterisation.lean}} \footnote{Did you notice using the axiom of choice?}
+\end{enumerate}
+
+\subsection{Universal properties}
+\begin{enumerate}
+\item Prove that two initial objects in a category are isomorphic.
+\item For each of the following categories, decide whether there is an initial, final, and/or zero object, and if so, describe them:
+$\sf{FinSet}$, $\sf{fdVec}$, $\sf{Top}$, $\sf{Top}_*$ (pointed topological spaces), $\sf{Semigroups}$, $\sf{Groups}$.
+\item Describe the product of two objects as the terminal object in some category.
+\item Describe the tensor product of two vectors spaces as the initial object in some category.
+\item Describe both the product and coproduct in the following categories: $\sf{FinSet}$, $\sf{Top}$, $\sf{Top}_*$, $\sf{AbGroup}$, $\sf{Group}$.
+\end{enumerate}
+
+\newpage
+\section{Assignment 2, due at the end of Week 6}
+\subsection{Equivalences}
+\begin{enumerate}
+\item Choose one of the following pairs of categories, and briefly describe the equivalence (but don't show me all the details -- ideally just talk about the most difficult part):
+\begin{itemize}
+	\item Compact Hausdorff topological spaces, and commutative $C^*$-algebras.
+	\item Subgroups of $\pi_1(X)$, and covers of $X$. (A condition is needed on $X$ to make this work. What is it?)
+	\item Subgroups of $\operatorname{Gal}(E \subset F)$, and intermediate field extensions. (A condition is needed on $E \subset F$ to make this work. What is it?)
+\end{itemize}
+\end{enumerate}
+
+\subsection{Adjunctions}
+\begin{enumerate}
+\item Consider the forgetful functor from abelian groups to groups. What is its left adjoint?
+\item In the category of finite dimensional vector spaces, show that $- \otimes V$ is biadjoint to $- \otimes V^*$.
+\item Prove that the `hom-set isomorphism' and `unit/counit' definitions of an adjunction are equivalent.
+\end{enumerate}
+
+\subsection{Idempotent completion}
+The `idempotent completion' $\Kar(\cC)$ (also called the `Karoubi envelope') is defined as follows:
+\begin{align*}
+\Obj \Kar(\cC) & = \left\{ (X \in \Obj(\cC), p :  X \to X) \mid| p^2 = p \right\} \\
+\Kar(\cC)((X,p) \to (X',p')) & = \left\{ f \in \cC(X \to X') \mid| fp = f = p'f \right\}.
+\end{align*}
+\begin{enumerate}
+\item Let $\mathsf{primeVec}$ denote the full subcategory of $\mathsf{Vec}$ consisting of vector spaces with prime dimensions. Show that $\Kar(\mathsf{primeVec}) \cong \mathsf{Vec}$.
+\item Construct an equivalence $\iota_\cC : \Kar(\Kar(\cC)) \cong \Kar(\cC)$.
+\item Show that there is a fully faithful functor $\cC \to \Kar(\cC)$ given by $X \mapsto (X, 1_X)$.
+\end{enumerate}
+
+\subsection{The Yoneda lemma}
+\begin{enumerate}
+\item Are there set-theoretic difficulties hiding in the Yoneda lemma?
+\item Explain why $\Fun(\cC^\text{op} \to \cD) = \Fun(\cC \to \cD^\text{op})$. Prove that $\Set^\text{op} \ncong \Set$, but that $\fdVec^\text{op} \cong \fdVec$.
+\end{enumerate}
+
+\newpage
+\section{Assignment 3!?}
+\begin{enumerate}
+% \item Prove that every monoidal category is monoidally equivalent to a strict monoidal category.
+
+% \begin{quote}
+% (Hint: given a monoidal category $\cC$, define a new monoidal category $\mathsf{List} \cC$, whose objects are lists of objects in $\cC$. In $\mathsf{List} \cC$, tensor product of objects is concatenation of lists, and the tensor unit is the empty list. There should be a functor $\mathsf{List} \cC$ to $\cC$ defined by sending a list $[x_1, x_2, \ldots, x_n]$ to $(((1 \otimes x_1) \otimes x_2) \otimes \cdots \otimes x_n$. Your job is to describe what happens at the level of morphisms, and check that everything works.)
+% \end{quote}
+
+\item Find an example of a monoidal functor which is not naturally isomorphic to any strict monoidal functor.
+
+(Hint: consider categories $\Vec^\omega G$, where $G$ is a finite group, and $\omega \in H^3(G, k^\times)$ is a 3-cocycle. In particular, consider $G = \mathbb Z / 2 \mathbb Z$. The category $\Vec \mathbb Z / 2 \mathbb Z$ can be made into a monoidal category in two
+distinct ways: either with the `obvious' associator, or with the associator $\alpha_{X, Y, Z} : (X \otimes Y) \otimes Z \to X \otimes (Y \otimes Z)$ which, when $Z$ is 1-dimensional, is either the identity if $Z$ is in the even grading, or minus the identity if $Z$ is in the odd grading. If you're going to use this example you should explain carefully why this associator works. You should be able to show that there are \emph{no} strict monoidal functors between these two versions of $\Vec \mathbb Z / 2 \mathbb Z$, but nevertheless there are non-strict monoidal functors, with a non-trivial tensorator; you should write one down explicitly.)
+
+\item Let $\cC$ be a monoidal category. We say a `monoid object' in $\cC$ (or, as we gain confidence, just a monoid in $\cC$) is a tuple $(A \in \Obj C, \iota: 1 \to A, m: A \otimes A \to A)$ satisfying some conditions. Look up, or work out, what these conditions should be. (Hint: look at chapter 7 of Etingof, Gelaki, Nikshych, and Ostrik's book \href{http://www-math.mit.edu/~etingof/egnobookfinal.pdf}{Tensor Categories}.) You should be able to show that a monoid object in $\mathsf{Vec}$ is what is usually called an associative unital algebra.
+\begin{enumerate}
+\item A `module object' for a monoid object $A \in \cC$ is a tuple $(M, \triangleright: A \otimes M \to M)$ satisfying an appropriate condition (what is it?). A morphism $f$ between module objects $M$ and $M'$ is a morphism between the underlying objects, such that $f \circ \triangleright_M = \triangleright_{M'} \circ (1_A \otimes f)$. Draw the string diagram corresponding to this axiom. Define composition of module morphisms, by imitating the definition for modules over a ring. Show that modules for a fixed monoid object form a category.
+\end{enumerate}
+\item Show that $\Rep G$, for $G$ a finite group, forms a monoidal category.
+\item (For this part, you may assume we are looking at representations over the complex numbers.)
+\begin{itemize}
+\item If $\Rep G \cong \Rep H$, as categories, are $G$ and $H$ isomorphic?
+\begin{quote}
+(Hint: no, give a counterexample --- any pair of non-isomorphic groups with the same number of irreducible representations (equivalently, the same number of conjugacy classes) will do.)
+\end{quote}
+\item
+What about if $\Rep G \cong \Rep H$ as monoidal categories, and moreover this equivalence is compatible with the forgetful functors to $\Vec$?
+\begin{quote}
+(Hint: think about the monoidal automorphisms of the forgetful functor. You should prove that (not necessarily monoidal) automorphisms of the forgetful functor $\Rep G \to \Vec$ is a group isomorphic to $\mathbb C[G]^{\times}$, and then identify the subgroup of monoidal automorphisms is $G$ is itself. To do the first part, show that any such automorphism is determined by its component on the regular representation $\mathbb C[G]$; for this you may like to use that the regular representation is faithful, or (more or less equivalently) that there is a surjective $G$-linear map from the regular representation to any irreducible representation of $G$.)
+\end{quote}
+%\item What if we drop the condition about compatibility with the forgetful functors? (Hint: google `isocategorical group'; you can answer this with just an appropriate reference to the literature, or do it yourself.)
+\end{itemize}
+\end{enumerate}
+
+
+\newpage
+\section{Assignment 4?!}
+
+\subsection{Braided monoidal categories}
+\begin{enumerate}
+\item Show that Temperley-Lieb is a braided monoidal category, with braiding satisfying
+$$\braidcross =  A \twostrandid + A^{-1} \cupcap,$$
+for some $A$ so that $\delta = -A^2 - A^{-2}$.
+\item
+We can take a link diagram, and interpret it as a morphism $0 \to 0$ in Temperley-Lieb, by interpreting crossings according to the above formula. (Explain carefully what we're meant to do with \scalebox{0.5}{$\invbraidcross$}.)
+The morphism space $0 \to 0$ consists of just scalar multiples of the empty diagram, so this associates a number to a link diagram. Explain why this number is a \emph{framed} link invariant, i.e. that it doesn't change when we modify the link diagram by Reidemeister moves II and III, and a \href{https://en.wikipedia.org/wiki/Reidemeister_move}{modified} version of the usual Reidemeister move I.
+\item Calculate the invariant of the trefoil, according to this recipe. Show that the trefoil is not isotopic to the unknot, by showing this invariant takes different values on the two knots.
+\item What is this invariant usually called?
+\item Show that in $\Kar(TL)$, we have $(2,1_2) \cong (2,f^{(2)}) \oplus (0, 1_0)$. Here $f^{(2)}$ denotes the second Jones-Wenzl idempotent:
+$$f^{(2)} = \twostrandid -\frac{1}{\delta} \cupcap
+.$$
+\item 
+We can make another knot invariant by replacing each string of a knot diagram by two parallel strings, and somewhere on the knot inserting a copy of $f^{(2)}$.
+$$\mathfig{0.2}{cabled-trefoil}$$
+Explain why this doesn't depend on where we insert the $f^{(2)}$. Calculate this invariant for the unknot.
+\item We say a monoid $(A, m)$ in a braided monoidal category is commutative if $m \circ \beta = m$, where $\beta$ denotes the braiding. Define a monoidal structure on the category of modules for a commutative monoid.
+\end{enumerate}
+
+
+\end{document}
+
+\newpage
+\subsection{Abelian categories}
+\begin{enumerate}
+\item Show that in a rigid abelian category, the functor $- \otimes X$ is exact. (Proposition 2.1.8 of Bakalov-Kirillov, attached,
+gives a terse proof of this. I'd like you to carefully explain their steps. You may find the discussion at \url{https://math.stackexchange.com/q/98877/} helpful.)
+\end{enumerate}
+
+
+\section{Odds and ends}
+\subsection{More on adjoints}
+\begin{enumerate}  
+\item* Consider the forgetful functor from compact Hausdorff spaces into Hausdorff spaces. Show that its left adjoint is Stone-\v{C}ech compactification.
+\item Recall the $\cC-\mathsf{Set}$ is the category of functors from $\cC$ to $\mathsf{Set}$. Given a functor $F : \cC \to \cD$, we have the pull-back functor $F^* : \cD-\mathsf{Set} \to \cC-\mathsf{Set}$ given by precomposition by $F$. If $F^*$ has adjoints, we call them the right push-forward $F_*$ and the left pushforward $F_!$ (pronounced usually `$F$-shriek').
+
+(You may like to read \url{https://arxiv.org/abs/1009.1166}.)
+\begin{enumerate}
+	\item \nn{Calculate some examples.}
+	\item Show that the polynomial functors, namely those of the form $F_! G^* H_* : \cE-\mathsf{Set} \to \cB-\mathsf{Set}$ for some diagram $$\cB \xleftarrow{F} \cC \xrightarrow{G} \cD \xleftarrow{H} \cE,$$ are closed under composition. (You may assume that all categories are finitely presented, i.e. the path category of some finite graph modulo finitely many relations. You may like to look at \url{https://ncatlab.org/nlab/show/polynomial+functor}, although as is often the case at the \emph{nLab}, the presentation there is more general than we need.) 
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{document}
+
