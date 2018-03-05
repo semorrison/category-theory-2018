@@ -7,8 +7,8 @@ The plan
 Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pdf/1612.09375.pdf).
 
 * Week 1:
-    * Yiming will give the unit/counit definition of an adjunction.
-    * Mitchell will talk about some examples of adjunctions.
+    * [Yiming](Week1-Yiming.pdf) will give the unit/counit definition of an adjunction.
+    * [Mitchell](Week1-Mitchell.pdf) will talk about some examples of adjunctions.
 * Week 2:
     * Keeley will talk about adjunctions as initial objects (this is a more abstract perspective -- please make sure you've grokked already how to use initial objects to describe universal properties)
     * Josh will explain what representable functors are.
