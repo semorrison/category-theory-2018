@@ -10,7 +10,7 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
     * [Yiming](Week1-Yiming.pdf) will give the unit/counit definition of an adjunction.
     * [Mitchell](Week1-Mitchell.pdf) will talk about some examples of adjunctions.
 * Week 2:
-    * Keeley will talk about adjunctions as initial objects (this is a more abstract perspective -- please make sure you've grokked already how to use initial objects to describe universal properties)
+    * [Keeley](Week2-Keeley.pdf) will talk about adjunctions as initial objects (this is a more abstract perspective -- please make sure you've grokked already how to use initial objects to describe universal properties)
     * Josh will explain what representable functors are.
 * Week 3:
     * Chris will explain the statement of the Yoneda lemma, and perhaps give an example of it in action.
