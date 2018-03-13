@@ -11,10 +11,10 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
     * [Mitchell](Week1-Mitchell.pdf) will talk about some examples of adjunctions.
 * Week 2:
     * [Keeley](Week2-Keeley.pdf) will talk about adjunctions as initial objects (this is a more abstract perspective -- please make sure you've grokked already how to use initial objects to describe universal properties)
-    * Josh will explain what representable functors are.
+    * [Josh](Week2-Josh.pdf) will explain what representable functors are.
 * Week 3:
-    * Chris will explain the statement of the Yoneda lemma, and perhaps give an example of it in action.
-    * Likun will prove the Yoneda lemma.
+    * [Chris](Week3-Chris.pdf) will explain the statement of the Yoneda lemma, and perhaps give an example of it in action.
+    * [Likun](Week3-Likun.pdf) will prove the Yoneda lemma.
 * Week 4:
     * Adwait will define limits and colimits, and explain that products, equalizers, and pullbacks are special cases.
     * Yossi will explain how to construct limits from products and equalizers.
