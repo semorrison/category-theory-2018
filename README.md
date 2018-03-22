@@ -16,7 +16,7 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
     * [Chris](Week3-Chris.pdf) will explain the statement of the Yoneda lemma, and perhaps give an example of it in action.
     * [Likun](Week3-Likun.pdf) will prove the Yoneda lemma.
 * Week 4:
-    * Adwait will define limits and colimits, and explain that products, equalizers, and pullbacks are special cases.
+    * [Adwait](Week4-Adwait.pdf) will define limits and colimits, and explain that products, equalizers, and pullbacks are special cases.
     * [Yossi](Week4-Yossi.pdf) will explain how to construct limits from products and equalizers.
 * Week 5:
     * Roger will explain why if `D` is complete, then `Functor C D` is complete as well.
