@@ -20,8 +20,6 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
     * [Yossi](Week4-Yossi.pdf) will explain how to construct limits from products and equalizers.
 * Week 5:
     * Roger will explain why if `D` is complete, then `Functor C D` is complete as well.
-* Week 6:
-    * ??
 * Week 7:
     * Yiming will give the definition of a monoidal category, and some examples.
 * Week 8:
@@ -34,6 +32,8 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
     * Keeley will explain that monads are algebras in the monoidal category of endofunctors of a category `C`. He may also talk about monads and adjunctions. (Or possibly monads as understood by computer scientists.)
 * Week 12:
     * Yossi will define the Drinfeld centre of a monoidal category, and explain that it is braided.
+
+Scott has talked about: categorical databases, monoidal categories, Temperley-Lieb as a monoidal category and a braided monoidal category, `Vec^\omega G` and group cohomology, Temperley-Lieb at roots of unity, and fusion categories.
 
 Sources
 ---
@@ -53,7 +53,7 @@ Grading
 ---
 * a report on your class presentation (10%)
 * four written assignments (10% each, for 40% total)
-* a final essay (approx. 10 pages, on a topic of your choice related to the material we cover) (35%)
+* a [final essay](project.md) (approx. 10 pages, on a topic of your choice related to the material we cover) (35%)
 * a final presentation (by default, on the same topic as your final essay) (15%)
 
 Assignments
