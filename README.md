@@ -35,6 +35,8 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
 * Week 12:
     * Keeley will explain that monads are algebras in the monoidal category of endofunctors of a category `C`. He may also talk about monads and adjunctions. (Or possibly monads as understood by computer scientists.)
 
+Scott has talked about: categorical databases, monoidal categories, Temperley-Lieb as a monoidal category and a braided monoidal category, `Vec^\omega G` and group cohomology, Temperley-Lieb at roots of unity, and fusion categories.
+
 Sources
 ---
 You might also enjoy watching the [Catster's videos](https://www.youtube.com/user/TheCatsters).  A classic book (the early parts of which are quite readable) is MacLane's ''Categories for the working mathematician''. Emily Riehl's book [Category theory in context](http://www.math.jhu.edu/~eriehl/context.pdf) is also excellent, and pitched at a slightly higher level. Wikipedia often has quite good content on category theory. The [nLab](https://ncatlab.org/nlab/show/HomePage) is sometimes a useful source, but you have been warned.
@@ -53,7 +55,7 @@ Grading
 ---
 * a report on your class presentation (10%)
 * four written assignments (10% each, for 40% total)
-* a final essay (approx. 10 pages, on a topic of your choice related to the material we cover) (35%)
+* a [final essay](project.md) (approx. 10 pages, on a topic of your choice related to the material we cover) (35%)
 * a final presentation (by default, on the same topic as your final essay) (15%)
 
 Assignments
