@@ -89,24 +89,53 @@ The `idempotent completion' $\Kar(\cC)$ (also called the `Karoubi envelope') is 
 
 \item Find an example of a monoidal functor which is not naturally isomorphic to any strict monoidal functor.
 
-(Hint: consider categories $\Vec^\omega G$, where $G$ is a finite group, and $\omega \in H^3(G, k^\times)$ is a 3-cocycle. In particular, consider $G = \mathbb Z / 2 \mathbb Z$. The category $\Vec \mathbb Z / 2 \mathbb Z$ can be made into a monoidal category in two
-distinct ways: either with the `obvious' associator, or with the associator $\alpha_{X, Y, Z} : (X \otimes Y) \otimes Z \to X \otimes (Y \otimes Z)$ which, when $X, Y$, and $Z$ are 1-dimensional, is either the identity if any of $X, Y$, or $Z$ is in the even grading, or minus the identity if all  of $X, Y$, and $Z$ are in the odd grading. If you're going to use this example you should explain carefully why this associator works. You should be able to show that there are \emph{no} strict monoidal functors between these two versions of $\Vec \mathbb Z / 2 \mathbb Z$, but nevertheless there are non-strict monoidal functors, with a non-trivial tensorator; you should write one down explicitly.)
+
+\begin{quote}
+\scriptsize
+Hint: consider categories $\Vec^\omega G$, where $G$ is a finite group, and $\omega \in H^3(G, k^\times)$ is a 3-cocycle. In particular, consider $G = \mathbb Z / 2 \mathbb Z$. The category $\Vec \mathbb Z / 2 \mathbb Z$ can be made into a monoidal category in 
+a number of different ways. Let's consider the following three associators $\alpha^{(i)}_{X,Y,Z} : (X \otimes Y) \otimes Z \to X \otimes (Y \otimes Z)$. In each case, we'll just say what they do when $X, Y$, and $Z$ are 1-dimensional vector spaces (so either $\mathbb C_{\text{even}}$, in the even grading, or $\mathbb C_{\text{odd}}$, in the odd grading).
+\begin{align*}
+\alpha^{(1)}_{X,Y,Z} & = 1 \\
+\alpha^{(2)}_{X,Y,Z} & = \begin{cases} 1 & \text{if $Z = \mathbb C_{\text{even}}$} \\ -1 & \text{if $Z = \mathbb C_{\text{odd}}$} \end{cases} \\
+\alpha^{(3)}_{X,Y,Z} & = \begin{cases} 1 & \text{if any of $X, Y$, or $Z$ are $\mathbb C_{\text{even}}$} \\ -1 & \text{if all if $X, Y$, and $Z$ are $\mathbb C_{\text{odd}}$} \end{cases}
+\end{align*}
+If you're going to use this example you should explain carefully why these are actually associators. You should be able to show that there are 
+no monoidal functors, strict or otherwise, from $(\Vec \mathbb Z / 2 \mathbb Z, \alpha^{(3)})$ to $(\Vec \mathbb Z / 2 \mathbb Z, \alpha^{(1)})$, and moreover
+that there are monoidal functors, but no strict ones, from $(\Vec \mathbb Z / 2 \mathbb Z, \alpha^{(2)})$ to $(\Vec \mathbb Z / 2 \mathbb Z, \alpha^{(1)})$.
+You should be able to explicitly write down such functors, with tensorators.
+
+To make sure you really know what's going on, you might think about these questsions:
+\begin{itemize}
+\item What about functors back the other way?
+\item Which of these categories are equivalent?
+\item What are all the associators on $\Vec \mathbb Z / 2 \mathbb Z$?
+\item Which of these associators give categories that are monoidally equivalent to each other?
+\end{itemize}
+\end{quote}
 
 \item Let $\cC$ be a monoidal category. We say a `monoid object' in $\cC$ (or, as we gain confidence, just a monoid in $\cC$) is a tuple $(A \in \Obj C, \iota: 1 \to A, m: A \otimes A \to A)$ satisfying some conditions. Look up, or work out, what these conditions should be. (Hint: look at chapter 7 of Etingof, Gelaki, Nikshych, and Ostrik's book \href{http://www-math.mit.edu/~etingof/egnobookfinal.pdf}{Tensor Categories}.) You should be able to show that a monoid object in $\mathsf{Vec}$ is what is usually called an associative unital algebra.
+
+A `module object' for a monoid object $A \in \cC$ is a tuple $(M, \triangleright: A \otimes M \to M)$ satisfying an appropriate condition. A morphism $f$ between module objects $M$ and $M'$ is a morphism between the underlying objects, such that $f \circ \triangleright_M = \triangleright_{M'} \circ (1_A \otimes f)$.
 \begin{enumerate}
-\item A `module object' for a monoid object $A \in \cC$ is a tuple $(M, \triangleright: A \otimes M \to M)$ satisfying an appropriate condition (what is it?). A morphism $f$ between module objects $M$ and $M'$ is a morphism between the underlying objects, such that $f \circ \triangleright_M = \triangleright_{M'} \circ (1_A \otimes f)$. Draw the string diagram corresponding to this axiom. Define composition of module morphisms, by imitating the definition for modules over a ring. Show that modules for a fixed monoid object form a category.
+\item What is the complete definition of a module object?
+\item Draw the string diagram corresponding to the axiom describing module object morphisms.
+\item Define composition of module morphisms, by imitating the definition for modules over a ring.
+\item Show that modules for a fixed monoid object form a category.
 \end{enumerate}
 \item Show that $\Rep G$, for $G$ a finite group, forms a monoidal category.
 \item (For this part, you may assume we are looking at representations over the complex numbers, and $G$ and $H$ are finite.)
 \begin{itemize}
 \item If $\Rep G \cong \Rep H$, as categories, are $G$ and $H$ isomorphic?
 \begin{quote}
-(Hint: no, give a counterexample --- any pair of non-isomorphic groups with the same number of irreducible representations (equivalently, the same number of conjugacy classes) will do.)
+\scriptsize
+Hint: no, give a counterexample --- any pair of non-isomorphic groups with the same number of irreducible representations (equivalently, the same number of conjugacy classes) will do.
 \end{quote}
 \item
 What about if $\Rep G \cong \Rep H$ as monoidal categories, and moreover this equivalence is compatible with the forgetful functors to $\Vec$?
 \begin{quote}
-(Hint: think about the monoidal automorphisms of the forgetful functor. You should prove that (not necessarily monoidal) automorphisms of the forgetful functor $\Rep G \to \Vec$ is a group isomorphic to $\mathbb C[G]^{\times}$, and then identify that the subgroup of monoidal automorphisms is $G$ itself. To do the first part, show that any such automorphism is determined by its component on the regular representation $\mathbb C[G]$; for this you may like to use that the regular representation is faithful, or (more or less equivalently) that there is a surjective $G$-linear map from the regular representation to any irreducible representation of $G$.)
+\scriptsize
+
+Hint: think about the monoidal automorphisms of the forgetful functor. You should prove that (not necessarily monoidal) automorphisms of the forgetful functor $\Rep G \to \Vec$ is a group isomorphic to $\mathbb C[G]^{\times}$, and then identify that the subgroup of monoidal automorphisms is $G$ itself. To do the first part, show that any such automorphism is determined by its component on the regular representation $\mathbb C[G]$; for this you may like to use that the regular representation is faithful, or (more or less equivalently) that there is a surjective $G$-linear map from the regular representation to any irreducible representation of $G$.
 \end{quote}
 %\item What if we drop the condition about compatibility with the forgetful functors? (Hint: google `isocategorical group'; you can answer this with just an appropriate reference to the literature, or do it yourself.)
 \end{itemize}
