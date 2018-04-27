@@ -7,27 +7,27 @@ The plan
 Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pdf/1612.09375.pdf).
 
 * Week 1:
-    * [Yiming](Week1-Yiming.pdf) will give the unit/counit definition of an adjunction.
-    * [Mitchell](Week1-Mitchell.pdf) will talk about some examples of adjunctions.
+    * [Yiming](reports/Week1-Yiming.pdf) will give the unit/counit definition of an adjunction.
+    * [Mitchell](reports/Week1-Mitchell.pdf) will talk about some examples of adjunctions.
 * Week 2:
-    * [Keeley](Week2-Keeley.pdf) will talk about adjunctions as initial objects (this is a more abstract perspective -- please make sure you've grokked already how to use initial objects to describe universal properties)
-    * [Josh](Week2-Josh.pdf) will explain what representable functors are.
+    * [Keeley](reports/Week2-Keeley.pdf) will talk about adjunctions as initial objects (this is a more abstract perspective -- please make sure you've grokked already how to use initial objects to describe universal properties)
+    * [Josh](reports/Week2-Josh.pdf) will explain what representable functors are.
 * Week 3:
-    * [Chris](Week3-Chris.pdf) will explain the statement of the Yoneda lemma, and perhaps give an example of it in action.
-    * [Likun](Week3-Likun.pdf) will prove the Yoneda lemma.
+    * [Chris](reports/Week3-Chris.pdf) will explain the statement of the Yoneda lemma, and perhaps give an example of it in action.
+    * [Likun](reports/Week3-Likun.pdf) will prove the Yoneda lemma.
 * Week 4:
-    * [Adwait](Week4-Adwait.pdf) will define limits and colimits, and explain that products, equalizers, and pullbacks are special cases.
-    * [Yossi](Week4-Yossi.pdf) will explain how to construct limits from products and equalizers.
+    * [Adwait](reports/Week4-Adwait.pdf) will define limits and colimits, and explain that products, equalizers, and pullbacks are special cases.
+    * [Yossi](reports/Week4-Yossi.pdf) will explain how to construct limits from products and equalizers.
 * Week 5:
-    * [Roger](Week5-Roger.pdf) will explain why if `D` is complete, then `Functor C D` is complete as well.
+    * [Roger](reports/Week5-Roger.pdf) will explain why if `D` is complete, then `Functor C D` is complete as well.
 * Week 6:
     * No talk. (Scott will come to the meeting.)
 * Week 7:
     * Yiming will give the definition of a monoidal category, and some examples.
 * Week 8:
-    * Chris will give the definition and some examples of a braided monoidal category.
+    * [Chris](reports/Week8-Chris.pdf) will give the definition and some examples of a braided monoidal category.
 * Week 9:
-    * Likun will definition functors and natural transformations between monoidal categories and braided monoidal categories.
+    * Likun will define functors and natural transformations between monoidal categories and braided monoidal categories.
 * Week 10:
     * Adwait will define algebras and module objects in a monoidal category `C`, and explain that the category of module objects for an algebra `A` in `C` forms a module category for `C`.
 * Week 11:
