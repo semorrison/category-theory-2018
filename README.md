@@ -31,7 +31,7 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
 * Week 10:
     * Adwait will define algebras and module objects in a monoidal category `C`, and explain that the category of module objects for an algebra `A` in `C` forms a module category for `C`.
 * Week 11:
-    * Yossi will define the Drinfeld centre of a monoidal category, and explain that it is braided.
+    * [Yossi](reports/Week11-Yossi.pdf) will define the Drinfeld centre of a monoidal category, and explain that it is braided.
 * Week 12:
     * Keeley will explain that monads are algebras in the monoidal category of endofunctors of a category `C`. He may also talk about monads and adjunctions. (Or possibly monads as understood by computer scientists.)
 
